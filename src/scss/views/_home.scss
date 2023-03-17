@@ -1,0 +1,236 @@
+.section--title {
+  text-align: left;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+.wrapper-towishlist {
+  width: fit-content;
+  position: relative;
+  &:hover > .towishlist {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.towishlist {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #d3d3d3;
+  border-radius: 100%;
+  box-shadow: 0 3px 5px rgb(51 51 51 / 30%);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all ease;
+}
+.page-home {
+  .section--title {
+    text-align: left;
+    font-size: 1.8em;
+    font-weight: 700;
+  }
+  h5 {
+    font-weight: 700 !important;
+    color: #6f6f6f;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    margin: 0;
+  }
+  // Sección beneficios
+  #sectionBenefits {
+    .sectionBenefits {
+      &--padding-x {
+        //@include responsive(phone) {
+        //  padding-right: 0;
+        //  padding-left: 0;
+        //  .line--top {
+        //    margin-right: 0;
+        //    margin-left: 0;
+        //  }
+        //  .card-header {
+        //    .nav-fill {
+        //      margin-right: 0;
+        //      margin-left: 0;
+        //    }
+        //  }
+        //}
+        h6 {
+          text-transform: uppercase;
+          letter-spacing: normal;
+        }
+        .tabletBenefits {
+          &--textUppercase {
+            text-transform: uppercase;
+          }
+
+          // Sección Componentes Titulos
+        }
+      }
+    }
+  }
+  #sectionTitle {
+    .sectionTitle {
+      &--text {
+        text-align: left;
+      }
+      &--button {
+        text-align: right;
+      }
+      &__block {
+        display: flex;
+        align-items: center;
+      }
+      &--line {
+        margin: 0 0 0 1rem;
+        border: 0;
+        border-top: 3px solid rgb(182, 182, 182);
+        width: 9rem;
+      }
+    }
+    //@include responsive(tab-port-767) {
+    //  .sectionTitle {
+    //    &--text {
+    //      text-align: center;
+    //    }
+    //    &--button {
+    //      text-align: center;
+    //    }
+    //    &__block {
+    //      flex-direction: column;
+    //    }
+    //    &--line {
+    //      margin: .8rem 0 2rem;
+    //    }
+    //  }
+    //}
+  }
+  #sectionBenefits {
+    .py__section {
+      padding-bottom: 7rem;
+      padding-top: 7rem;
+    }
+    //@include responsive(tab-bt) {
+    //  .card-header {
+    //    max-width: 100%;
+    //    .nav-fill {
+    //      flex-wrap: nowrap;
+    //      .nav-item {
+    //        width: 40%;
+    //        a {
+    //          height: 150px;
+    //        }
+    //        svg {
+    //          height: 10vh;
+    //        }
+    //      }
+    //    }
+    //  }
+    //}
+    //@include responsive(tab-bt--tabs) {
+    //  .card-header-tabs {
+    //    flex-wrap: nowrap;
+    //  }
+    //}
+    //@include responsive(phoneXs-386) // 386PX;
+    //.card-header {
+    //  .nav-fill {
+    //    .nav-item {
+    //      a {
+    //        height: 160px;
+    //      }
+    //      //Section Video Corp
+    //    }
+    //  }
+    //}
+  }
+  #sectionChoose {
+    background-color: #f0f5f9;
+  }
+  //footer
+  #footer {
+    p {
+      margin: 0;
+    }
+    .FooterContainer {
+      &__up {
+        .logos-pago {
+          p {
+            font-size: 1.6rem;
+          }
+          //@include responsive(phone) {
+          //  li {
+          //    width: 33.3%;
+          //    margin: 0;
+          //    text-align: center;
+          //    &:nth-child(2) {
+          //      margin-bottom: 2rem;
+          //    }
+          //    img {
+          //      height: 3rem;
+          //    }
+          //  }
+          //}
+        }
+        .logos-afiliados {
+          //@include responsive(tab-bt) {
+          //  margin-top: 2em;
+          //  flex-direction: column;
+          //  &--texto {
+          //    text-align: center;
+          //  }
+          //  ul {
+          //    width: 30rem;
+          //    margin-top: 1rem;
+          //    li {
+          //      margin: 0;
+          //    }
+          //  }
+          //}
+        }
+      }
+      &__mid {
+        p {
+          font-size: 1.4rem;
+        }
+        &--textUppercase {
+          text-transform: uppercase;
+          font-size: 1.3rem !important;
+          font-weight: 900;
+          color: #babfc1;
+        }
+      }
+      &__padding {
+        padding-bottom: 5rem;
+        padding-top: 5rem;
+      }
+      //@include responsive(tab-port-767) {
+      //  &--col-pb {
+      //    margin-bottom: 3rem;
+      //  }
+      //  &--text-aling {
+      //    text-align: left;
+      //  }
+      //  &__mid {
+      //    p {
+      //      font-size: 1.6rem;
+      //    }
+      //  }
+      //}
+      &__bottom {
+        p {
+          font-size: 1.24rem;
+          text-align: center;
+          color: #808b90;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+// Utilities
+@import 'utilities/variables';
+@import 'utilities/functions';
+@import 'utilities/mixins';
+//vendors
+@import 'vendors/bootstrap';
+@import 'vendors/jquery-ui';
+//base
+@import 'base/reset';
+@import 'base/typo';
+//layout
+@import 'layout/navigation', 'layout/grid';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/forms';
+//components
+@import 'components/buttons';
+@import 'components/jumbo';
+//views
+@import 'views/home';
+@import 'views/auth';
+@import 'views/contact';
+//themes
+@import 'themes/theme';
+@import 'themes/admin';
+//Revisar y borrar
+@import 'variables';
+// Bootstrap
+
+// Pages
+@import 'pages/dashboard';

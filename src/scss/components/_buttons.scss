@@ -1,0 +1,42 @@
+.button {
+
+    position: relative;
+    border-radius: 3px;
+    margin: 0;
+    padding: 1rem 3rem !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    font-size: 1.5rem !important;
+    line-height: 1.1rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: transparent;
+    border: 1px solid transparent;
+    transition: all .2s ease;
+    text-align: center;
+    display: inline-block;
+    font-weight: 500 !important;
+    height: 4.5rem;
+    .large {
+        padding: 20px 56px;
+    }
+
+}
+.btn {
+    &--orange {
+        background-color: $OrangeHex !important;
+        color: $whiteHex !important;
+    }
+    &__link {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+    &:hover {
+        transform: translate3d(0, -2px, 0);
+        box-shadow: 0 18px 35px rgba(50,50,93,.01), 0 8px 15px rgba(0,0,0,.07);
+        transition: .3s;
+    }
+}
+input:focus {
+    outline: none;
+}

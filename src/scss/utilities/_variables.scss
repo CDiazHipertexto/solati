@@ -1,0 +1,40 @@
+// Override the Bootstrap defaults without modifying key, versioned files.
+$font-family-sans-serif: 'Poppins', sans-serif;
+
+// Corporate global Fonts - Solati
+$font-family-sans-serif-plp: 'Poppins', sans-serif;
+
+// Corporate global colors - Solati
+$blueLightHex: #ef8935;
+$blueLightRgb: rgb(239, 137, 57);
+
+$OrangeHex: #f4832a;
+$OrangeRgb: rgb(242, 97, 34);
+
+$greenDarkHex: #1C2030;
+$greenDarkRgb: rgb(28, 32, 48);
+
+$pinkDarkHex: #FF1786;
+$pinkDarkRgb: rgb(255, 23, 134);
+
+$blackHex: #0000;
+$blackRgb: rgb(0, 0, 0);
+
+$whiteHex: #ffffff;
+$whiteRgb: rgb(255, 255, 255);
+$color-text: #333333;
+
+
+$success: #19b0d5;
+$info: #17a2b8;
+$warning: #f30f50;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Font Sizes
+$s-size: 1.2rem;
+$m-size: 1.6rem;// default 16px font size base
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+
