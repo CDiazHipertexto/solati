@@ -2,7 +2,7 @@
 
 ## Folder
 ```
-cd app-gestion-documental
+cd solati
 ```
 
 ## Project setup
