@@ -22,10 +22,6 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-/public
-/public/hot
-/public/storage
-/public/images
 /vendor
 /.idea
 /.vagrant
