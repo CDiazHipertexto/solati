@@ -97,7 +97,7 @@ export default {
     props: {
         fieldId: {
             type: String,
-            required: true,
+            required: false,
             default: 'checkbox-1',
         },
     },

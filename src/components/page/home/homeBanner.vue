@@ -15,7 +15,6 @@
       @autoplay-resume='internalAutoPlaying = true',
       :bullets='true',
       :touchable="true",
-      :breakpoints='breakpoints',
       :infinite='true',
       :transitionSpeed='600',
       prevent-y-scroll,
