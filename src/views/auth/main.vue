@@ -177,6 +177,9 @@
       &__switch
         display: flex
         justify-content: center
+        @media only screen and (max-width: 410px)
+          justify-content: center
+          flex-direction: column
         p
           font-size: 1em
           span

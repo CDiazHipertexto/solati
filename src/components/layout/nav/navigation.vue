@@ -150,7 +150,14 @@
               visibility: visible
               opacity: 1
               transition: 0.3s all ease
-
+    #navbarResponsive
+      @media all and (max-width: 991px)
+        display: block
+        position: fixed
+        bottom: 0
+        left: 0
+        right: 0
+        background: white
     .navbar-brand
       padding: .8em
       background: $greenDarkHex

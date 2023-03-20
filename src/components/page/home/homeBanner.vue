@@ -206,6 +206,9 @@
             @media all and (max-width: 991px)
               min-height: 905px
               height: 905px
+            @media all and (max-width: 500px)
+              min-height: 980px
+              height: 980px
             .vueperslides__inner
               min-height: inherit !important
         &__arrow
@@ -218,13 +221,15 @@
     .wysiwyg
         font-size: 21px
         line-height: 1.6
+        @media all and (max-width: 500px)
+          font-size: 14px
         h1, h2, h3, h4, h5, h6, p
             color: #ffffff
             @media all and (max-width: 991px)
               text-align: center !important
-        h1
+        h1, .titleBanner
           @media all and (max-width: 500px)
-            font-size: 1.6em !important
+            font-size: 1.4em !important
         .center
             h1, h2, h3, h4, h5, h6, p
                 text-align: center

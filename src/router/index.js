@@ -6,6 +6,7 @@ import VueRouter from 'vue-router'
 import homeOne from '@/views/homeOne/homeOne'
 import main from '@/views/auth/main'
 import emailValidation from "../views/auth/emailValidation";
+import catalogo from "../views/catalogo/catalogo";
 
 
 Vue.use(VueRouter)
@@ -29,6 +30,11 @@ const routes = [
     path: '/auth/email',
     name: 'email',
     component: emailValidation
+  },
+  {
+    path: '/dashboard',
+    name: 'catalogo',
+    component: catalogo
   }
 ]
 

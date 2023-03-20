@@ -3,8 +3,8 @@
     div.label--float
         div(style='position: relative', :class='validateClass')
           input(:type='typeInput', v-model='inputValue', @focus='handleInputFocus(false)', :id='id' , @blur='handleInputFocus(true)' @textchange="(text)=>{$emit('input', text.value )}").register_form_username_input.unlogged-input
-          label.unlogged-label(:style="{'color': placeholderColor, 'fontSize': !isActive ? fontSize+'em' : '', 'marginTop': !isActive ? textOffsetBot +'em' : ''}", :class='{placeholder_active: isActive}',)
-            i( :class='icon' ).fa
+          label.unlogged-label(:style="{'color': placeholderColor, 'fontSize':unActive === null ? fontSize+'rem' : unActive? fontSize+'rem':'', 'marginTop': unActive? textOffsetBot +'rem':''}", :class='{placeholder_active:unActive}',)
+            i( :class='icon' ).fas
             span(v-html=" placeholder" )
 
 </template>
@@ -72,7 +72,9 @@
             }
         },
         computed: {
-
+          isActive () {
+            return false
+          }
         },
         watch: {
           inputValue(value) {

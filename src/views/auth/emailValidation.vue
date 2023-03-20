@@ -1,37 +1,34 @@
 <template lang="pug">
     //email validation
-    section#section-email
-        div( v-show='!showCode').container-main
-            div.section-header
-              a(href="/").logo
-                logoSolati
-            div.section-body
-                div.section-body--line
-                    div(v-if='showMsgNotFound').alert.alert-danger
-                        p {{ isLoggingIn ? 'Email no registrado.' : 'Nombre de usuario o contraseña incorrectos.' }}
-                    div(v-if='showMsgConflict').alert.alert-danger
+    #body-code.row
+      section#section-email
+          div( v-show='!showCode').container-main
+              div.section-header
+                a(href="/").logo
+                  logoSolati
+              div.section-body
+                  div.section-body--line
+                      div(v-if='showMsgNotFound').alert.alert-danger
+                          p {{ isLoggingIn ? 'Email no registrado.' : 'Nombre de usuario o contraseña incorrectos.' }}
+                      div(v-if='showMsgConflict').alert.alert-danger
+                          p Error
+                      div(v-if='showMsgError').alert.alert-danger
                         p Error
-                    div(v-if='showMsgError').alert.alert-danger
-                      p Error
-                    div(v-if='showMsgInvalidKey').alert.alert-danger
-                      p Error en Email
-                    div.section-body__title
-                        p Inciar sesión Email
-                    div.section-body__unlogged-input
-                        auth-form( :type-form="typeForm" type="email", @nameChanged='nameChanged', @emailChanged='emailChanged', :name-valid='nameValid', :email-valid='emailValid' )
-                    div.section-body__other
-                        .terms-accept(v-show="typeForm === 'register'")
-                          div.custom-control.custom-checkbox(:class="checkedValid === null ? '' : !checkedValid ? 'alert-check' : checkedValid ? 'has-check' : ''")
-                            input#checkbox-1.custom-control-input(type="checkbox", v-model='checked', name='checkbox-1', value='accepted', @change='updateChecked')
-                            label.custom-control-label(for='checkbox-1')
-                          span.tyc
-                            a(href="/terminos-y-condiciones.html", target="_blank", style="text-decoration: underline !important;") Aceptar terminos
-                        button-comp(
-                          @click='validate'
-                          :class="showLoading ? 'disable' : ''"
-                          ).btn.btn__validate.btn--orange
-                            template(slot='general-text-btn')
-                              span(:class="showLoading ? 'spinner-circle' : ''") Iniciar sesión
+                      div(v-if='showMsgInvalidKey').alert.alert-danger
+                        p Error en Email
+                      div.section-body__title
+                          p Inciar sesión Email
+                      div.section-body__unlogged-input
+                          auth-form( :type-form="typeForm" type="email", @nameChanged='nameChanged', @emailChanged='emailChanged', :name-valid='nameValid', :email-valid='emailValid' )
+                      div.section-body__other
+                          .terms-accept(v-show="typeForm === 'register'")
+                            div.custom-control.custom-checkbox(:class="checkedValid === null ? '' : !checkedValid ? 'alert-check' : checkedValid ? 'has-check' : ''")
+                              input#checkbox-1.custom-control-input(type="checkbox", v-model='checked', name='checkbox-1', value='accepted', @change='updateChecked')
+                              label.custom-control-label(for='checkbox-1')
+                            span.tyc
+                              a(href="/terminos-y-condiciones.html", target="_blank", style="text-decoration: underline !important;") Aceptar terminos
+                          a(href="/dashboard").btn.btn__validate.btn--orange
+                            span Iniciar sesión
 
 </template>
 
@@ -139,7 +136,7 @@
               this.checkedValid = validateFields ( this.isChecked , 'checkBox' );
             },
             validate: function () {
-                this.nameValid = validateFields ( this.name , 'name', this.typeForm  );
+              this.nameValid = validateFields ( this.name , 'name', this.typeForm  );
                 this.emailValid = validateFields ( this.email , 'email' );
                 this.checkedValid = validateFields ( this.isChecked , 'checkBox' );
 
@@ -226,9 +223,13 @@
         min-height: auto
     #section-email
         font-family: "Raleway", sans-serif
-        width: 42em
+        width: 100%
+        max-width: 42em
         margin: 6em auto 0
         text-align: center
+        @media only screen and (max-width: 410px)
+          width: 96%
+          margin: 3em auto 0
         .section-header
             margin-bottom: 3em
             .logo
